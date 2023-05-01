@@ -13,6 +13,10 @@
 
     <title>News</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+
+
 
 </head>
 
@@ -257,8 +261,71 @@
 
             </div>
             <div class="d-flex justify-content-between gap-1">
-                <div class="col-8 bg-dark">
-                  
+                <div class="col-8  ">
+                    <div class="top-slider px-3 py-3 bg-dark">
+                        <div>
+                            <h6 class="m-0 fw-bolder">TOP STORIES</h6>
+                        </div>
+                        <div class="swiper mySwiper mt-2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./imgs/1.jpg" class="rounded-2">
+                                    <div class="p-2">
+                                        <p class="m-0 text-danger  small fw-bold">LIVE BLOG </p>
+                                        <p  class="m-0  small fw-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, eveniet maxime odiu ldf djfdufhd djdfdufhf</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./imgs/2.jpg" class="rounded-2">
+                                    <div class="p-2">
+                                        <p class="m-0 text-danger  small fw-bold">LIVE BLOG </p>
+                                        <p  class="m-0  small fw-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, eveniet maxime odiu ldf djfdufhd djdfdufhf</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./imgs/3.jpg" class="rounded-2">
+                                    <div class="p-2">
+                                        <p class="m-0 text-danger  small fw-bold">LIVE BLOG </p>
+                                        <p  class="m-0  small fw-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, eveniet maxime odiu ldf djfdufhd djdfdufhf</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./imgs/2.jpg" class="rounded-2">
+                                    <div class="p-2">
+                                        <p class="m-0 text-danger  small fw-bold">LIVE BLOG </p>
+                                        <p  class="m-0  small fw-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, eveniet maxime odiu ldf djfdufhd djdfdufhf</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./imgs/1.jpg" class="rounded-2">
+                                    <div class="p-2">
+                                        <p class="m-0 text-danger  small fw-bold">LIVE BLOG </p>
+                                        <p  class="m-0  small fw-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, eveniet maxime odiu ldf djfdufhd djdfdufhf</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./imgs/3.jpg" class="rounded-2">
+                                    <div class="p-2">
+                                        <p class="m-0 text-danger  small fw-bold">LIVE BLOG </p>
+                                        <p  class="m-0  small fw-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, eveniet maxime odiu ldf djfdufhd djdfdufhf</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./imgs/1.jpg" class="rounded-2">
+                                    <div class="p-2">
+                                        <p class="m-0 text-danger  small fw-bold">LIVE BLOG </p>
+                                        <p  class="m-0  small fw-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, eveniet maxime odiu ldf djfdufhd djdfdufhf</p>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <div class="swiper-button-next">
+
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <!-- <div class="swiper-pagination"></div> -->
+                        </div>
+                    </div>
                 </div>
                 <div class="col-3 bg-dark">
                     hhfh
@@ -298,7 +365,26 @@
         crossorigin="anonymous"></script>
 
     <script src="./index.js"></script>
-   
+
+    <!-- Initialize Swiper -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
 </body>
 
 </html>

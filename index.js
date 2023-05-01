@@ -1,4 +1,8 @@
 
+const slider = document.querySelector('.top-nav');
+let isDown = false;
+let startX;
+let scrollLeft;
 
 slider.addEventListener('mousedown', (e) => {
   isDown = true;
