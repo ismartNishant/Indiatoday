@@ -11,7 +11,6 @@ body {
 }
 
 .top-nav {
-    position: relative;
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -35,6 +34,7 @@ body {
 }
 
 .mid-nav {
+    margin-top: 1.5rem;
     padding: .2rem 7rem;
 }
 
@@ -81,11 +81,12 @@ body {
 
 .close-menu {
     display: none;
-    left: 13rem;
-    top: 5rem;
+    left: 17.5rem;
+    top: 1rem;
 }
 
 .center-div {
+    margin-top: 6rem;
     margin-left: 12rem;
 }
 
@@ -111,7 +112,6 @@ body {
 }
 
 .d-flex .col-8 .top-slider {
-    /* height: 20rem; */
     overflow: hidden;
 }
 
@@ -124,10 +124,6 @@ body {
     width: 17rem !important;
     margin-right: 1rem !important;
     font-size: 18px;
-    background: #251f1f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .swiper-slide img {
@@ -137,15 +133,44 @@ body {
     object-fit: cover;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+    top: -.7rem !important;
+    width: 2rem !important;
+    height: 2rem !important;
+    color: #fff !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #000 !important;
+}
+
+.swiper-button-prev {
+    left: 36rem !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 1rem !important;
+
+}
+
 @media screen and (max-width:850px) {
 
     .mid-nav,
     .main-container {
-        padding: 0.2rem 4rem;
+        padding: 0.2rem 0rem;
     }
 
     .center-div {
         padding: .5rem !important;
+        margin-left: 13rem;
+    }
+
+    .left-div {
+        margin-top: 5.4rem;
+
     }
 }
 
@@ -173,16 +198,17 @@ body {
         display: block;
     }
 
-    .mid-nav .d-flex .d-flex div .small {
+    .mid-nav .d-flex .d-flex div .small,
+    .bottom-nav .d-flex .text-center p {
         font-size: .7em;
     }
 
-    .main-container {
-        padding: 0rem;
-    }
 
     .left-div {
+        margin-top: 0rem;
+        height: 100vh;
         display: none;
+        width: 17rem;
     }
 
     .bottom-nav,
