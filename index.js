@@ -43,11 +43,10 @@ let swiper = new Swiper(".mySwiper", {
 });
 
 var swiper2 = new Swiper(".mySwiper2", {
-  
   autoHeight: true,
   slidesPerView: "auto",
   grabCursor: true,
-  
+
   pagination: {
     el: ".swiper-pagination2",
     clickable: true,
@@ -58,9 +57,47 @@ var swiper2 = new Swiper(".mySwiper2", {
   breakpoints: {
     centeredSlides: true,
   },
+  // Enable debugger
+  debugger: true,
+});
+
+var swiper3 = new Swiper(".mySwiper3", {
+  autoHeight: true,
+  slidesPerView: "auto",
+  grabCursor: true,
+
+  // pagination: {
+  //   el: ".swiper-pagination3",
+  //   clickable: true,
+
+  // },
+  breakpoints: {
+    centeredSlides: true,
+  },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next3",
+    prevEl: ".swiper-button-prev3",
+  },
+  // Enable debugger
+  debugger: true,
+});
+
+var swiper4 = new Swiper(".mySwiper4", {
+  autoHeight: true,
+  slidesPerView: "auto",
+  grabCursor: true,
+
+  // pagination: {
+  //   el: ".swiper-pagination3",
+  //   clickable: true,
+
+  // },
+  breakpoints: {
+    centeredSlides: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next4",
+    prevEl: ".swiper-button-prev4",
   },
   // Enable debugger
   debugger: true,
@@ -94,11 +131,25 @@ slider.addEventListener("mousemove", (e) => {
   console.log(walk);
 });
 
-$(document).ready(function () {
-  $("#close").click(function () {
-    $(".left-div").hide();
+// to hide and show left div
+
+
+
+if ($(window).width() <= 912) {
+  $(document).ready(function () {
+    $("#close").click(function () {
+      $(".left-div").hide();
+    });
+    $(".my-menu").click(function () {
+      $(".left-div").show();
+    });
+    $(document).mouseup(function (e) {
+      var container = $(".left-div");
+
+      // if the target of the click isn't the container nor a descendant of the container
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        container.hide();
+      }
+    });
   });
-  $(".my-menu").click(function () {
-    $(".left-div").show();
-  });
-});
+}
