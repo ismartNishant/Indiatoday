@@ -54,7 +54,7 @@ body {
 .left-div {
     width: 12.5rem;
     height: 90vh;
-    z-index: 999999 !important;
+    z-index: 999 !important;
 }
 
 .left-div::-webkit-scrollbar {
@@ -134,13 +134,17 @@ body {
     height: auto;
 }
 
-.swiper-slide {
+.mySwiper .swiper-slide,
+.mySwiper2 .swiper-slide {
     width: 17rem !important;
     margin-right: 1rem !important;
     font-size: 18px;
 }
-
-.swiper-slide img {
+.mySwiper2 .small,
+.mySwiper .small{
+    font-size: .9rem ;
+}
+.mySwiper .swiper-slide img{
     display: block;
     width: 100%;
     height: 10rem;
@@ -169,7 +173,32 @@ body {
     font-size: 1rem !important;
 
 }
+.swiper-pagination2{
+    bottom: -1.5rem !important;
+}
+.swiper-pagination2 .swiper-pagination-bullet {
+    width: 20px !important;
+    height: 20px !important;
+    text-align: center !important;
+    line-height: 20px !important;
+    font-size: 12px !important;
+    color: #000 !important;
+    opacity: 1 !important;
+    background: rgba(246, 244, 244, 0.863) !important;
+  }
 
+  .swiper-pagination2 .swiper-pagination-bullet-active {
+    color: #fff !important;
+    background: red !important;
+  }
+
+  footer{
+    z-index: 999 !important;
+    position: relative;
+  }
+  footer div img{
+    height: 2.5rem;
+  }
 @media only screen and (max-width:1280px) {
     .swiper-button-prev {
         left: 27rem !important;
@@ -185,9 +214,24 @@ body {
     .swiper-button-prev {
         left: 17rem !important;
     }
+    .d-flex .col-8 .bg-dark .px-3 .d-flex h4,
+    .bx-smile,.bx-message-detail,.bx-bookmark,.bx-share{
+        font-size: .8rem !important;
+    }
+    .d-flex .col-8 .bg-dark .px-3 .d-flex p{
+        font-size: .6rem;
+    }
+  
 }
 
 @media screen and (max-width:950px) {
+    .swiper-pagination2 .swiper-pagination-bullet {
+        width: 17px !important;
+        height: 17px !important;
+        line-height: 17px !important;
+        font-size: 11px !important;
+       
+    }
     .mid-nav .d-flex .btn-danger {
         display: none !important;
     }
@@ -223,16 +267,26 @@ body {
     .close-menu {
         display: block;
     }
+    .mySwiper2 .swiper-slide {
+        width: 13rem !important;
+        
+    }
+    
 }
 
 
 
 @media screen and (max-width:600px) {
+    .mySwiper2 .swiper-slide {
+        width: 17rem !important;
+    }
+    .mySwiper2 .swiper-wrapper{
+        margin: 0rem ;
+    }
     .mid-nav {
         padding: .2rem;
     }
     .close-menu {
-
         top: 0.5rem;
     }
 
@@ -258,6 +312,9 @@ body {
     }
     .d-flex .col-8 {
         width: 100%;
+    }
+    footer a{
+        font-size: .7rem;
     }
 }
 

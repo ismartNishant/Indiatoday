@@ -42,6 +42,30 @@ let swiper = new Swiper(".mySwiper", {
   },
 });
 
+var swiper2 = new Swiper(".mySwiper2", {
+  
+  autoHeight: true,
+  slidesPerView: "auto",
+  grabCursor: true,
+  
+  pagination: {
+    el: ".swiper-pagination2",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  },
+  breakpoints: {
+    centeredSlides: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // Enable debugger
+  debugger: true,
+});
+
 const slider = document.querySelector(".top-nav");
 let isDown = false;
 let startX;
