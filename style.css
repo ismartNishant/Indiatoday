@@ -82,7 +82,7 @@ body {
 .close-menu {
     display: none;
     left: 17.5rem;
-    top: 1rem;
+    top: 6rem;
 }
 
 .center-div {
@@ -111,10 +111,24 @@ body {
 
 }
 
-.d-flex .col-8 .top-slider {
+ .center-div .d-flex .col-8 .top-slider {
     overflow: hidden;
 }
-
+.center-div .d-flex .col-3{
+    width: 30%;
+}
+.center-div .d-flex .col-3 .ad-1{
+    height: 14rem;
+}
+.center-div .d-flex .col-3 .ad-2{
+    height: 5rem;
+}
+.center-div .d-flex .col-3 .ad-1 img,
+.center-div .d-flex .col-3 .ad-2 img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
 .swiper {
     width: 100%;
     height: auto;
@@ -156,7 +170,35 @@ body {
 
 }
 
-@media screen and (max-width:850px) {
+@media only screen and (max-width:1280px) {
+    .swiper-button-prev {
+        left: 27rem !important;
+    }
+
+}
+
+@media screen and (max-width:1040px) {
+    .swiper-button-next {
+        right: -0.5rem !important;
+    }
+
+    .swiper-button-prev {
+        left: 17rem !important;
+    }
+}
+
+@media screen and (max-width:950px) {
+    .mid-nav .d-flex .btn-danger {
+        display: none !important;
+    }
+
+    .swiper-button-prev {
+        left: 24.5rem !important;
+    }
+
+    .mid-nav .bx-menu {
+        display: block;
+    }
 
     .mid-nav,
     .main-container {
@@ -164,13 +206,22 @@ body {
     }
 
     .center-div {
-        padding: .5rem !important;
-        margin-left: 13rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 1rem 0rem !important;
+
     }
 
     .left-div {
         margin-top: 5.4rem;
+        height: 100vh;
+        display: none;
+        width: 17rem;
+    }
 
+    .bottom-nav,
+    .close-menu {
+        display: block;
     }
 }
 
@@ -179,11 +230,10 @@ body {
 @media screen and (max-width:600px) {
     .mid-nav {
         padding: .2rem;
-
     }
+    .close-menu {
 
-    .mid-nav .d-flex .btn-danger {
-        display: none !important;
+        top: 0.5rem;
     }
 
     .mid-nav .d-flex .d-flex .bx {
@@ -194,33 +244,30 @@ body {
         padding: 0rem .3rem !important;
     }
 
-    .mid-nav .bx-menu {
-        display: block;
-    }
-
     .mid-nav .d-flex .d-flex div .small,
     .bottom-nav .d-flex .text-center p {
         font-size: .7em;
     }
 
-
     .left-div {
         margin-top: 0rem;
-        height: 100vh;
-        display: none;
-        width: 17rem;
-    }
 
-    .bottom-nav,
-    .close-menu {
-        display: block;
     }
-
-    .center-div {
-        margin-left: 0rem;
-        padding: 1rem 0rem !important;
+    .center-div .d-flex .col-3{
+        width: 100%;
     }
-
+    .d-flex .col-8 {
+        width: 100%;
+    }
 }
 
-@media screen and (max-width:500px) {}
+@media screen and (max-width:500px) {
+    .swiper-button-prev {
+        left: 17rem !important;
+    }
+}
+@media screen and (max-width:400px) {
+    .swiper-button-prev {
+        left: 14rem !important;
+    }
+}
