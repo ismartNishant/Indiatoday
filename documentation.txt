@@ -1,0 +1,23 @@
+Swiper js is used for  sliders
+you can find more about it on below link
+
+https://swiperjs.com/get-started
+----------------------------------------------------------
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+---------------------------------------------------
+
+
+Hope you like my work 
+Contact me if have any work for me
+My Phone No +91 7218566898
+Gmail:- nishantrajputa11@gmail.com
+Digital Portfolio:-  https://angry-poitras-257ac9.netlify.app/
+
+
+Thanks and regards
+Nishant  Rajput
