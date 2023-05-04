@@ -131,9 +131,12 @@ slider.addEventListener("mousemove", (e) => {
   console.log(walk);
 });
 
+
+
+
 // to hide and show left div
-if (window.innerWidth < 912) 
-{
+
+if (window.innerWidth <= 912) {
   const closeButton = document.querySelector("#close");
   const myMenu = document.querySelectorAll(".my-menu");
   const leftDiv = document.querySelector(".left-div");
@@ -148,16 +151,20 @@ if (window.innerWidth < 912)
     });
   }
 
+  window.onresize = function () {
+      leftDiv.style.display = "block ";
+  };
+  
   closeButton.addEventListener("click", function () {
     leftDiv.style.display = "none";
   });
 
-  document.addEventListener("mouseup", function(e) {
-    var container = leftDiv;
+  // document.addEventListener("mouseup", function (e) {
+  //   var container = leftDiv;
 
-    if (!container.contains(e.target)) {
-      container.style.display = "none";
-    }
-  });
+  //   if (!container.contains(e.target)) {
+  //     container.style.display = "none";
+  //   }
+  // });
+}
 
- }
