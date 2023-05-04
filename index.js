@@ -132,24 +132,32 @@ slider.addEventListener("mousemove", (e) => {
 });
 
 // to hide and show left div
+if (window.innerWidth < 912) 
+{
+  const closeButton = document.querySelector("#close");
+  const myMenu = document.querySelectorAll(".my-menu");
+  const leftDiv = document.querySelector(".left-div");
 
-
-
-if ($(window).width() <= 912) {
-  $(document).ready(function () {
-    $("#close").click(function () {
-      $(".left-div").hide();
-    });
-    $(".my-menu").click(function () {
-      $(".left-div").show();
-    });
-    $(document).mouseup(function (e) {
-      var container = $(".left-div");
-
-      // if the target of the click isn't the container nor a descendant of the container
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        container.hide();
+  for (var i = 0; i < myMenu.length; i++) {
+    myMenu[i].addEventListener("click", function () {
+      if (leftDiv.style.display === "none") {
+        leftDiv.style.display = "block";
+      } else {
+        leftDiv.style.display = "none";
       }
     });
+  }
+
+  closeButton.addEventListener("click", function () {
+    leftDiv.style.display = "none";
   });
-}
+
+  document.addEventListener("mouseup", function(e) {
+    var container = leftDiv;
+
+    if (!container.contains(e.target)) {
+      container.style.display = "none";
+    }
+  });
+
+ }
