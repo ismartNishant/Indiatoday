@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Detail</title>
+    <title>Details</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -77,7 +77,7 @@
         <div class="left-div  position-fixed p-3 bg-dark text-white overflow-auto shadow">
             <div class="d-flex align-items-center justify-content-between border-bottom pb-3 border-secondary">
                 <i class='bx bxs-user p-2 rounded-circle bg-secondary fs-4'></i>
-                <button class="btn rounded-pill  btn-outline-light py-0 px-3 small">SIGN IN</button>
+                <button class="btn rounded-pill  btn-outline-danger py-0 px-3 small">SIGN IN</button>
             </div>
             <div class="position-fixed close-menu">
                 <button class="btn btn-light text-dark rounded-circle p-1 d-flex justify-content-center" id="close"><i
@@ -85,7 +85,7 @@
             </div>
             <div
                 class="d-flex justify-content-between text-white align-items-center py-3 border-bottom  border-secondary">
-                <p class="small m-0 ">DARK MODE</p>
+                <p class="small m-0 " id="mode" >LIGHT MODE</p>
                 <div class="form-check form-switch">
                     <input class="form-check-input p-2" type="checkbox" role="switch" id="lightSwitch" checked />
                 </div>
@@ -97,149 +97,166 @@
 
                 <div class="mt-3 ">
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-home p-2 rounded-circle bg-light text-secondary fs-4 me-3'></i>
+                        <i
+                            class='bx bxs-home p-2 rounded-circle border bg-white shadow-lg  text-secondary fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Home</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-detail p-2 rounded-circle bg-light text-info fs-4 me-3'></i>
+                        <i class='bx bxs-detail p-2 rounded-circle border bg-white shadow-lg text-info fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Personalise</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-tv p-2 rounded-circle bg-light text-danger fs-4 me-3'></i>
+                        <i class='bx bxs-tv p-2 rounded-circle border bg-white shadow-lg text-danger fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Live TV</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-castle p-2 rounded-circle bg-light  fs-4 me-3'
+                        <i class='bx bxs-castle p-2 rounded-circle border bg-white shadow-lg  fs-4 me-3'
                             style="color: rgb(255, 183, 0);"></i>
                         <p class="m-0 fw-bold">INDIA</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bx-world p-2 rounded-circle bg-light text-info fs-4 me-3'></i>
+                        <i class='bx bx-world p-2 rounded-circle border bg-white shadow-lg text-info fs-4 me-3'></i>
                         <p class="m-0 fw-bold">World</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bx-bar-chart p-2 rounded-circle bg-light text-primary fs-4 me-3'></i>
+                        <i
+                            class='bx bx-bar-chart p-2 rounded-circle border bg-white shadow-lg text-primary fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Business</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bx-dna p-2 rounded-circle bg-light text-danger fs-4 me-3'></i>
+                        <i class='bx bx-dna p-2 rounded-circle border bg-white shadow-lg text-danger fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Technology</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bx-run p-2 rounded-circle bg-light text-info fs-4 me-3'></i>
+                        <i class='bx bx-run p-2 rounded-circle border bg-white shadow-lg text-info fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Showbuzz</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bx-football p-2 rounded-circle bg-light text-success fs-4 me-3'></i>
+                        <i
+                            class='bx bx-football p-2 rounded-circle border bg-white shadow-lg text-success fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Sports</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-cricket-ball p-2 rounded-circle bg-light text-danger fs-4 me-3'></i>
+                        <i
+                            class='bx bxs-cricket-ball p-2 rounded-circle border bg-white shadow-lg text-danger fs-4 me-3'></i>
                         <p class="m-0 fw-bold">IPL 2023</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-flask p-2 rounded-circle bg-light text-info fs-4 me-3'></i>
+                        <i class='bx bxs-flask p-2 rounded-circle border bg-white shadow-lg text-info fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Science</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bx-pulse p-2 rounded-circle bg-light text-success fs-4 me-3'></i>
+                        <i class='bx bx-pulse p-2 rounded-circle border bg-white shadow-lg text-success fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Health</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-microphone-alt p-2 rounded-circle bg-light text-danger fs-4 me-3'></i>
+                        <i
+                            class='bx bxs-microphone-alt p-2 rounded-circle border bg-white shadow-lg text-danger fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Podcasts</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-hot p-2 rounded-circle bg-light  fs-4 me-3'
+                        <i class='bx bxs-hot p-2 rounded-circle border bg-white shadow-lg  fs-4 me-3'
                             style="color: rgb(255, 183, 0);"></i>
                         <p class="m-0 fw-bold">Trending</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-video p-2 rounded-circle bg-light text-danger fs-4 me-3'></i>
+                        <i class='bx bxs-video p-2 rounded-circle border bg-white shadow-lg text-danger fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Videos</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-detail p-2 rounded-circle bg-light text-secondary fs-4 me-3'></i>
+                        <i
+                            class='bx bxs-detail p-2 rounded-circle border bg-white shadow-lg text-secondary fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Magazine</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-drink p-2 rounded-circle bg-light text-primary fs-4 me-3'></i>
+                        <i class='bx bxs-drink p-2 rounded-circle border bg-white shadow-lg text-primary fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Lifestyle</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-news p-2 rounded-circle bg-light text-danger fs-4 me-3'></i>
+                        <i class='bx bxs-news p-2 rounded-circle border bg-white shadow-lg text-danger fs-4 me-3'></i>
                         <p class="m-0 fw-bold">NewsMo</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-graduation p-2 rounded-circle bg-light text-dark fs-4 me-3'></i>
+                        <i
+                            class='bx bxs-graduation p-2 rounded-circle border bg-white shadow-lg text-dark fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Education</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-car p-2 rounded-circle bg-light text-danger fs-4 me-3'></i>
+                        <i class='bx bxs-car p-2 rounded-circle border bg-white shadow-lg text-danger fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Auto</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-tree p-2 rounded-circle bg-light text-success fs-4 me-3'></i>
+                        <i class='bx bxs-tree p-2 rounded-circle border bg-white shadow-lg text-success fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Environment</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bx-chair p-2 rounded-circle bg-light text-dark fs-4 me-3'></i>
+                        <i class='bx bx-chair p-2 rounded-circle border bg-white shadow-lg text-dark fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Law Today</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bx-news p-2 rounded-circle bg-light text-danger fs-4 me-3'></i>
+                        <i class='bx bx-news p-2 rounded-circle border bg-white shadow-lg text-danger fs-4 me-3'></i>
                         <p class="m-0 fw-bold">News Analysis</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-city p-2 rounded-circle bg-light  fs-4 me-3' style="color: brown;"></i>
+                        <i class='bx bxs-city p-2 rounded-circle border bg-white shadow-lg  fs-4 me-3'
+                            style="color: brown;"></i>
                         <p class="m-0 fw-bold">Cities</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bx-run p-2 rounded-circle bg-light  fs-4 me-3' style="color: blueviolet;"></i>
+                        <i class='bx bx-run p-2 rounded-circle border bg-white shadow-lg  fs-4 me-3'
+                            style="color: blueviolet;"></i>
                         <p class="m-0 fw-bold">Crime</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-message-rounded-dots p-2 rounded-circle bg-light text-success fs-4 me-3'></i>
+                        <i
+                            class='bx bxs-message-rounded-dots p-2 rounded-circle border bg-white shadow-lg text-success fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Opinion</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-analyse p-2 rounded-circle bg-light text-primary fs-4 me-3'></i>
+                        <i
+                            class='bx bxs-analyse p-2 rounded-circle border bg-white shadow-lg text-primary fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Horoscopes</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-cloud-lightning p-2 rounded-circle bg-light text-info fs-4 me-3'></i>
+                        <i
+                            class='bx bxs-cloud-lightning p-2 rounded-circle border bg-white shadow-lg text-info fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Weather</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-hand-up p-2 rounded-circle bg-light  fs-4 me-3' style="color: blueviolet;"></i>
+                        <i class='bx bxs-hand-up p-2 rounded-circle border bg-white shadow-lg  fs-4 me-3'
+                            style="color: blueviolet;"></i>
                         <p class="m-0 fw-bold">Interactives</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-carousel p-2 rounded-circle bg-light text-danger fs-4 me-3'></i>
+                        <i
+                            class='bx bxs-carousel p-2 rounded-circle border bg-white shadow-lg text-danger fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Visual Stories</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxl-bitcoin p-2 rounded-circle bg-light text-dark fs-4 me-3'></i>
+                        <i class='bx bxl-bitcoin p-2 rounded-circle border bg-white shadow-lg text-dark fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Crypto</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-calendar-check p-2 rounded-circle bg-light text-secondary fs-4 me-3'></i>
+                        <i
+                            class='bx bxs-calendar-check p-2 rounded-circle border bg-white shadow-lg text-secondary fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Fact Check</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='p-2 rounded-circle bg-light text-dark fw-bolder fs-6 me-3'>DIU</i>
+                        <i class='p-2 rounded-circle border bg-white shadow-lg text-dark fw-bolder fs-6 me-3'>DIU</i>
                         <p class="m-0 fw-bold">DIU</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-camera p-2 rounded-circle bg-light text-warning fs-4 me-3'></i>
+                        <i
+                            class='bx bxs-camera p-2 rounded-circle border bg-white shadow-lg text-warning fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Photos</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bxs-book-content p-2 rounded-circle bg-light text-primary fs-4 me-3'></i>
+                        <i
+                            class='bx bxs-book-content p-2 rounded-circle border bg-white shadow-lg text-primary fs-4 me-3'></i>
                         <p class="m-0 fw-bold">Code of Ethics</p>
                     </div>
                     <div class="d-flex align-items-center pb-3">
-                        <i class='bx bx-globe p-2 rounded-circle bg-light text-info fs-4 me-3'></i>
+                        <i class='bx bx-globe p-2 rounded-circle border bg-white shadow-lg text-info fs-4 me-3'></i>
                         <p class="m-0 fw-bold">News</p>
                     </div>
 
@@ -247,29 +264,28 @@
             </div>
         </div>
         <!--left div end --------------------------------------->
+        
         <div class="center-div p-4  ">
-            <div class=" m-auto text-center d-flex flex-wrap justify-content-center align-items-center gap-3">
-                <a href="./detail.html" class="btn rounded-pill border border-secondary text-white "> Sudan Crisis</a>
-                <a href="./detail.html" class="btn rounded-pill border border-secondary text-white"> Wrestlers'
-                    Protest</a>
-                <a href="./detail.html" class="btn rounded-pill border border-secondary text-white"> IPL 2023 Points
-                    Table</a>
-                <a href="./detail.html" class="btn rounded-pill border border-secondary text-white"> Same-Sex
-                    Marriage</a>
-                <a href="./detail.html" class="btn rounded-pill border border-secondary text-white"> Covid-19</a>
-            </div>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item "><a href="#" class="text-decoration-none text-danger">News</a></li>
+                  <li class="breadcrumb-item "><a href="#" class="text-decoration-none text-danger">India</a></li>
+                  <li class="breadcrumb-item " aria-current="page" class="text-decoration-none ">Manipur Governor’s nod to shoot-at-sight order in violence-hit state</li>
+                </ol>
+              </nav>
             <div class="col-8 bg-dark p-4  rounded-1 my-3 shadow">
                 <h4>The Kerala Story actor Adah Sharma says, ‘not propaganda, watch film before judging it’
                 </h4>
                 <p class="text-secondary">The Kerala Story has been in the news for stating that 32000
-                    Malayalai girls
-                    joined the IS. Adah Sharma said the film doesn't portray Kerala derogatorily.</p>
-
+                    Malayalai girls joined the IS. Adah Sharma said the film doesn't portray Kerala derogatorily
+                    "In view of the prevailing law and order situation in the State (Manipur), there are people, officials,
+                     labourers who are either stranded  feel insecure in their current location," the order said.
+                     "As an immediate measures, State Government ave set up temporary relief camp for them who feel 
+                     unsafe to live in their area," it added..</p>
             </div>
             <div>
                 <div class="d-flex justify-content-between gap-1 flex-wrap mb-3">
                     <div class="col-8  shadow">
-                       
                         <div class="top-slider p-3 bg-dark position-relative">
                             <div>
                                 <h6 class="m-0 fw-bolder d-flex align-items-center">
@@ -953,7 +969,7 @@
     </div>
     <!--- -->
     <footer>
-        <div class="bg-dark p-3 shadow-lg">
+        <div class="bg-dark p-3 shadow-lg border-top border-secondary">
             <div class="d-flex justify-content-between align-items-center border-bottom p-3 border-secondary flex-wrap">
                 <h3>INDIA TODAY</h3>
                 <div class="d-flex align-items-center gap-3 flex-wrap justify-content-center">
@@ -980,15 +996,15 @@
                 </div>
             </div>
         </div>
-        <div class="py-3 bg-dark shadow-lg">
-            <div class=" d-flex justify-content-evenly  border-bottom border-secondary mb-2 pb-2 flex-wrap">
+        <div class="pt-3 bg-dark shadow-lg">
+            <div class=" d-flex justify-content-evenly  border-bottom border-secondary mb-3 pb-2 flex-wrap">
                 <a href="#" class="text-white text-decoration-none">ABOUT US </a>
                 <a href="#" class="text-white text-decoration-none">CONTACT US </a>
                 <a href="#" class="text-white text-decoration-none">TERMS AND CONDITIONS </a>
                 <a href="#" class="text-white text-decoration-none">ARCHIVES </a>
             </div>
-            <div class="text-center">
-                <p class="small text-secondary">Copyright symbol © or the word “copyright”</p>
+            <div class="text-center ">
+                <p class="small text-secondary m-0 pb-4">Copyright symbol © or the word “copyright”</p>
             </div>
         </div>
 
@@ -1006,17 +1022,9 @@
     <script src="./switch.js"></script>
 
     <!-- Initialize Swiper -->
-    <!-- Swiper JS -->
-
-
-    <!-- Initialize Swiper -->
     <script>
-        // //theme toggler
-        // function themeToggle() {
-        //     var element = document.body;
-        //     element.dataset.bsTheme =
-        //         element.dataset.bsTheme == "light" ? "dark" : "light";
-        // }
+
+       
     </script>
 </body>
 
