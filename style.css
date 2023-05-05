@@ -5,8 +5,6 @@
     scroll-behavior: smooth;
 }
 
-
-
 .top-nav {
     width: 100%;
     overflow-x: hidden;
@@ -22,7 +20,6 @@
     background: rgba(255, 255, 255, 0.3);
     cursor: grabbing;
     cursor: -webkit-grabbing;
-
 }
 
 .top-nav a {
@@ -35,7 +32,7 @@
     padding: .2rem 7rem;
 }
 
-.mid-nav .bx-menu,
+.mid-nav .my-menu,
 .bottom-nav {
     display: none;
 }
@@ -48,53 +45,38 @@
     padding: 0rem 7rem;
 }
 
+.offcanvas {
+    visibility: visible !important;
+}
 
-.left-div {
-    width: 12.5rem;
+.offcanvas.show {
+    transform: none;
+}
+
+.offcanvas-start {
+    top: 6rem;
+    width: 14rem;
     height: 90vh;
-    z-index: 9999 !important;
-}
-
-.left-div::-webkit-scrollbar {
-    width: .2rem;
-}
-
-.left-div::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 8px red;
-}
-
-.left-div .form-check-input:checked {
-    background-color: #898a8b;
-    border-color: #898a8b;
-}
-
-.left-div .form-switch .form-check-input {
-    width: 3rem;
-}
-
-.left-div .form-check-input {
-    height: 1.8rem;
+    transform: translateX(-0%) !important;
 }
 
 .close-menu {
     display: none;
-    left: 17.5rem;
-    top: 6rem;
+}
+
+.offcanvas-body::-webkit-scrollbar {
+    width: .2rem;
+}
+
+.offcanvas-body::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 8px red;
 }
 
 .center-div {
     margin-top: 6rem;
     margin-left: 12rem;
 }
-
-/* .center-div .text-center a {
-    background-color: rgba(255, 255, 255, 0.099);
-} */
-
-/* .center-div .text-center a:hover {
-    border: 2px solid #fff;
-} */
 
 .advertise div {
     height: 15rem;
@@ -106,7 +88,6 @@
     width: 100%;
     height: auto;
     object-fit: fill;
-
 }
 
 .center-div .d-flex .col-8 .top-slider {
@@ -138,24 +119,28 @@
 }
 
 .mySwiper .swiper-slide,
-.mySwiper2 .swiper-slide ,
-.mySwiper3 .swiper-slide{
+.mySwiper2 .swiper-slide,
+.mySwiper3 .swiper-slide {
     width: 17rem !important;
     margin-right: 1rem !important;
     font-size: 18px;
 }
-.mySwiper4 .swiper-slide{
+
+.mySwiper4 .swiper-slide {
     width: 10rem;
     margin-right: 1.5rem !important;
 }
-.mySwiper4 .swiper-wrapper .swiper-slide .rounded-circle{
-    height: 10rem ;
+
+.mySwiper4 .swiper-wrapper .swiper-slide .rounded-circle {
+    height: 10rem;
     width: 10rem;
 }
-.mySwiper4 .swiper-wrapper .swiper-slide .rounded-circle img{
+
+.mySwiper4 .swiper-wrapper .swiper-slide .rounded-circle img {
     object-fit: cover;
-  
+
 }
+
 .mySwiper2 .small,
 .mySwiper .small {
     font-size: .9rem;
@@ -175,10 +160,10 @@
     height: 2rem !important;
 }
 
- .swiper-button-next:hover, 
- .swiper-button-prev:hover {
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
     background-color: #f50404 !important;
-} 
+}
 
 .swiper-button-prev {
     left: 36rem !important;
@@ -211,7 +196,7 @@
 }
 
 footer {
-    z-index: 99991 !important;
+    z-index: 9991 !important;
     position: relative;
 }
 
@@ -250,12 +235,25 @@ footer div img {
 }
 
 @media screen and (max-width:950px) {
+    .close-menu {
+        display: block;
+    }
+
+    .offcanvas.show {
+        transform: none !important;
+    }
+
+    .offcanvas-start {
+        top: 0rem;
+        height: 100vh;
+        transform: translateX(-100%) !important;
+    }
+
     .swiper-pagination2 .swiper-pagination-bullet {
         width: 17px !important;
         height: 17px !important;
         line-height: 17px !important;
         font-size: 11px !important;
-
     }
 
     .mid-nav .d-flex .btn-danger {
@@ -266,7 +264,7 @@ footer div img {
         left: 24.5rem !important;
     }
 
-    .mid-nav .bx-menu {
+    .mid-nav .my-menu {
         display: block;
     }
 
@@ -279,20 +277,17 @@ footer div img {
         margin-left: 1rem;
         margin-right: 1rem;
         padding: 1rem 0rem !important;
-
-    }
-
-    .left-div {
-        margin-top: 5.4rem;
-        height: 100vh;
-        display: none;
-        width: 17rem;
     }
 
     .bottom-nav,
     .close-menu {
-        z-index: 99999;
+        z-index: 999;
         display: block;
+    }
+
+    footer {
+        padding-bottom: 4rem;
+        z-index: 99 !important;
     }
 
     .mySwiper2 .swiper-slide {
@@ -302,10 +297,8 @@ footer div img {
 
 }
 
-
-
 @media screen and (max-width:600px) {
-    .mySwiper2 .swiper-slide {
+    .offcanvas .mySwiper2 .swiper-slide {
         width: 17rem !important;
     }
 
@@ -315,10 +308,6 @@ footer div img {
 
     .mid-nav {
         padding: .2rem;
-    }
-
-    .close-menu {
-        top: 0.5rem;
     }
 
     .mid-nav .d-flex .d-flex .bx {
@@ -334,16 +323,11 @@ footer div img {
         font-size: .7em;
     }
 
-    .left-div {
-        margin-top: 0rem;
-
-    }
-
     .center-div .d-flex .col-3,
     .col-10 {
-        width: 100% ;
+        width: 100%;
     }
-    
+
     .d-flex .col-8,
     .col-8 {
         width: 100%;
@@ -363,5 +347,9 @@ footer div img {
 @media screen and (max-width:400px) {
     .swiper-button-prev {
         left: 14rem !important;
+    }
+
+    .my-menu {
+        padding: 0rem;
     }
 }
