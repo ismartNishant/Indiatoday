@@ -120,6 +120,16 @@ slider.addEventListener("mousemove", (e) => {
 });
 
 
+
+document.querySelectorAll('.theme-colors .color').forEach(color =>{
+  color.onclick = () => {
+      let background = color.style.background;
+      document.querySelector(':root').style.setProperty('--bs-danger', background);
+      // document.querySelector(':root').style.setProperty('--bs-red',background);
+  }
+}); 
+
+
 //--------------------------------for bs5 theme follow below code-----------------------------------------
 (function () {
   let lightSwitch = document.getElementById("lightSwitch");

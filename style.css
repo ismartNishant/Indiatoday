@@ -5,6 +5,33 @@
     scroll-behavior: smooth;
 }
 
+:root {
+    --bs-danger: #dc3545;
+}
+.for-clr{
+ color: var(--bs-danger) !important;
+}
+.for-bg-clr{
+    background-color: var(--bs-danger) !important;
+}
+.for-br-clr{
+    border-color: var(--bs-danger) !important;
+}
+.offcanvas .offcanvas-body .py-1 .d-flex .rounded-pill:hover{
+    background-color: var(--bs-danger) !important;
+}
+
+ .theme-colors .color {
+    height: 25px;
+    width: 25px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+.theme-colors .color:hover{
+    border-radius: 50%;
+    transform: scale(1.1);
+}
+
 .top-nav {
     width: 100%;
     overflow-x: hidden;
@@ -38,7 +65,7 @@
 }
 
 .bottom-nav .d-flex .text-center:hover {
-    color: #dc3545;
+    color: var(--bs-danger);
 }
 
 .main-container {
@@ -70,7 +97,7 @@
 
 .offcanvas-body::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 8px red;
+    -webkit-box-shadow: inset 0 0 8px var(--bs-danger);
 }
 
 .center-div {
@@ -162,7 +189,7 @@
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-    background-color: #f50404 !important;
+    background-color: var(--bs-danger) !important;
 }
 
 .swiper-button-prev {
@@ -192,7 +219,7 @@
 
 .swiper-pagination2 .swiper-pagination-bullet-active {
     color: #fff !important;
-    background: red !important;
+    background: var(--bs-danger) !important;
 }
 
 footer {
@@ -256,7 +283,7 @@ footer div img {
         font-size: 11px !important;
     }
 
-    .mid-nav .d-flex .btn-danger {
+    .mid-nav .d-flex #premium {
         display: none !important;
     }
 
